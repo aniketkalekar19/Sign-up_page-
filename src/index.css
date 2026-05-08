@@ -1,0 +1,102 @@
+/* Core Design System */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary-gradient: linear-gradient(135deg, #7b4dff, #5521ff);
+  --bg-gradient: linear-gradient(to bottom, #d9eef9 0%, #c8d9e7 35%, #8b6ccf 55%, #4d4d67 100%);
+  --glass-bg: rgba(255, 255, 255, 0.12);
+  --glass-border: rgba(255, 255, 255, 0.2);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  --text-white: #ffffff;
+  --text-dim: rgba(255, 255, 255, 0.7);
+  --accent-purple: #e4c8ff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--bg-gradient);
+  background-attachment: fixed;
+  color: var(--text-white);
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Background Effects */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(2px);
+  z-index: -1;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  width: 700px;
+  height: 300px;
+  background: rgba(167, 111, 255, 0.45);
+  border-radius: 50%;
+  filter: blur(120px);
+  top: 180px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+/* Common UI Elements */
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(15px);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow), inset 0 0 1px rgba(255, 255, 255, 0.4);
+  border-radius: 20px;
+  animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.btn-primary {
+  background: var(--primary-gradient);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 24px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(98, 0, 255, 0.35);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(98, 0, 255, 0.5);
+}
+
+.input-field {
+  width: 100%;
+  padding: 15px 18px;
+  border: none;
+  outline: none;
+  border-radius: 12px;
+  font-size: 15px;
+  color: #2d2d3f;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.1);
+}
+
+.input-field::placeholder {
+  color: #6a6a8c;
+}

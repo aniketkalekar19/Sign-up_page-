@@ -1,0 +1,160 @@
+/* Login Page */
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+}
+
+
+.Container {
+    margin: 100px auto;
+}
+
+.Container {
+    width: 380px;
+    min-height: 500px;
+
+    padding: 40px 30px;
+
+    border-radius: 20px;
+
+    position: relative;
+    z-index: 10;
+
+    /* Glassmorphism */
+    background: rgba(255,255,255,0.12);
+
+    backdrop-filter: blur(15px);
+
+    border: 1px solid rgba(255,255,255,0.2);
+
+    box-shadow:
+        0 8px 32px rgba(0,0,0,0.25),
+        inset 0 0 1px rgba(255,255,255,0.4);
+
+    text-align: center;
+}
+
+/* Heading */
+.Container h1{
+    color: white;
+
+    font-size: 42px;
+
+    margin-bottom: 35px;
+
+    letter-spacing: 1px;
+
+    font-weight: 600;
+}
+
+/* Inputs */
+.Container input{
+    width: 100%;
+
+    padding: 15px 18px;
+
+    margin-bottom: 18px;
+
+    border: none;
+
+    outline: none;
+
+    border-radius: 12px;
+
+    font-size: 15px;
+
+    color: white;
+
+    background: rgba(255,255,255,0.14);
+
+    backdrop-filter: blur(10px);
+
+    box-shadow:
+        inset 0 0 2px rgba(255,255,255,0.5),
+        0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Placeholder */
+.Container input::placeholder{
+    color: rgba(255,255,255,0.75);
+}
+
+/* Forgot Password */
+.Container a{
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+.Container a:hover{
+    color: #d7b8ff;
+}
+
+/* Button */
+.Container button{
+    width: 100%;
+
+    padding: 14px;
+
+    margin-top: 20px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    color: white;
+
+    background: linear-gradient(
+        135deg,
+        #7b4dff,
+        #5521ff
+    );
+
+    transition: 0.3s;
+
+    box-shadow:
+        0 8px 20px rgba(98, 0, 255, 0.35);
+}
+
+/* Button Hover */
+.Container button:hover{
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 25px rgba(98, 0, 255, 0.5);
+}
+
+/* Bottom Text */
+.Container p{
+    margin-top: 28px;
+
+    color: white;
+
+    font-size: 15px;
+}
+
+/* Signup/Login Link */
+.Container p a{
+    color: #e4c8ff;
+
+    font-weight: 500;
+}
