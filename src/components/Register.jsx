@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import '../Styles/Login.css' // Reusing Login styles for consistency
+import '../styles/Login.css' // Reusing Login styles for consistency
 
 const Register = () => {
   const navigate = useNavigate();

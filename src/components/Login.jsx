@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import '../Styles/Login.css'
+import '../styles/Login.css'
 
 const Login = () => {
     const navigate = useNavigate();
@@ -18,7 +18,8 @@ const Login = () => {
                 <input type="password" placeholder="Enter Password" required />
                 
                 <div className="login-options">
-                    <Link to="/forgot-password">Forgot Password?</Link>
+                     <Link to="/forgot-password">Forgot Password?</Link>
+
                 </div>
 
                 <button type="submit">Login</button>
